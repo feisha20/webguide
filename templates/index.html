@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    <title>网址大全--{{ main_title.first.title  }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}"/>
+    <link href="{% static 'favicon.ico' %}" rel="Shortcut Icon">
+    <link href="{% static 'favicon.ico' %}" rel="Bookmark">
+    <link rel="icon"  href="{% static 'favicon.ico' %}"/>
+</head>
+
+<body>
+<div class="main">
+        <h1>{{ main_title.first.title }}</h1>
+    <div class="list">
+        <h5>{{ sub_titles.first.title }}</h5>
+        <ul class="clearfix">
+            {% for url in urls %}
+                <a href="{{ url.url }}" target="_blank" style="text-decoration: none;color: #333">
+                    <li>
+                        <img src="/static/img/{{ url.logo }}" class="iconCss">
+                        <p style="font-size: medium">{{ url.name }}</p>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="list">
+        <h5>{{ sub_titles.1.title }}</h5>
+        <ul class="clearfix">
+            {% for url2 in urls2 %}
+                <a href="{{ url2.url }}" target="_blank" style="text-decoration: none;color: #333">
+                    <li>
+                        <img src="/static/img/{{ url2.logo }}" class="iconCss">
+                        <p style="font-size: medium">{{ url2.name }}</p>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+<div class="list">
+        <h5>{{ sub_titles.2.title }}</h5>
+        <ul class="clearfix">
+            {% for url3 in urls3 %}
+                <a href="{{ url3.url }}" target="_blank" style="text-decoration: none;color: #333">
+                    <li>
+                        <img src="/static/img/{{ url3.logo }}" class="iconCss">
+                        <p style="font-size: medium">{{ url3.name }}</p>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>

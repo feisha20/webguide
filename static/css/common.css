@@ -1,0 +1,130 @@
+.main{
+	width: 1200px;
+	margin:2% auto 5%;
+}
+.main h1{
+	text-align: center;
+	font-size:26px;
+	color:#000;
+}
+.list{
+	width:1200px;
+	margin:30px auto 0px;
+}
+.list h5{
+   text-align:left;
+   font-size:22px;
+   margin-top:30px;
+   color:#000;
+}
+.list ul{
+	margin-top:20px;
+}
+.list ul li{
+	width:240px;
+	height:75px;
+	float:left;
+	display:inline-block;
+	margin:0px 20px 20px 0px;
+	padding:20px;
+	box-shadow: 0 0 10px #e3e3e3;
+	-webkit-box-shadow: 0 0 10px #e3e3e3;
+	-moz-box-shadow: 0 0 10px #e3e3e3;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	font-size:15px;
+    cursor:pointer;
+    position: relative;
+}
+.list ul li:hover{
+	width:240px;
+	height:75px;
+	float:left;
+	display:inline-block;
+	margin:0px 20px 20px 0px;
+	padding:20px;
+	box-shadow: 0 0 10px #333;
+	-webkit-box-shadow: 0 0 10px #333;
+	-moz-box-shadow: 0 0 10px #333;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	font-size:14px;
+	cursor:pointer;
+}
+ .list ul li:nth-child(4) , .list ul li:nth-child(8) , .list ul li:nth-child(12){
+	margin-right:0px;
+}
+/*.list ul li:nth-child(1){
+	background:url(../img/icon5.png) no-repeat 20px 20px;
+}
+.list ul li:nth-child(2){
+	background:url(../img/icon2.png) no-repeat 20px 20px;
+}
+.list ul li:nth-child(3){
+	background:url(../img/icon3.png) no-repeat 20px 20px;
+}
+.list ul li:nth-child(4){
+	background:url(../img/icon4.png) no-repeat 20px 20px;
+}
+.list ul li:nth-child(5){
+	background:url(../img/icon1.png) no-repeat 20px 20px;
+}
+.list ul li:nth-child(6){
+	background:url(../img/icon7.png) no-repeat 20px 20px;
+}
+.list ul li:nth-child(7){
+	background:url(../img/icon9.png) no-repeat 20px 20px;
+} */
+.list ul li p{
+	width: 161px;
+    line-height: 26px;
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left:120px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+.list ul li p a{
+	color:#000;
+    font-size:16px;
+    display: block;
+}
+.list ul li p a:hover{
+	color:#078d34;
+	text-decoration: underline;
+}
+.iconCss {
+    display: inline-block;
+    width:80px;
+    height: 80px;
+    float: left;
+    margin-right: 20px;
+}
+/* .list2 ul li:nth-child(1){
+	background:url(../img/icon12.png) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(2){
+	background:url(../img/icon8.png) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(3){
+	background:url(../img/icon10.png) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(4){
+	background:url(../img/icon13.png) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(5){
+	background:url(../img/icon11.png) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(6){
+	background:url(../img/icon6.png) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(7){
+	background:url(../img/icon14.jpg) no-repeat 20px 20px;
+}
+.list2 ul li:nth-child(8){
+	background:url(../img/icon15.jpg) no-repeat 20px 20px;
+} */

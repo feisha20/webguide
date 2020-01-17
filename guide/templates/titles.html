@@ -1,0 +1,102 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>网站管理 -栏目设置</title>
+
+    <link rel="shortcut icon">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/codemirror/ambiance.css' %}" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="{% static 'css/plugins/dataTables/dataTables.bootstrap.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="text-left">
+                                <a data-toggle="modal" class="btn btn-primary"
+                                   href="/guide/add_title.html">新增</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-content">
+                        <table class="table table-striped table-bordered table-hover dataTables-base">
+                            <thead>
+                            <tr>
+                                <th>栏目名称</th>
+                                <th>是否是主栏目</th>
+                                <th>排序</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for title in titles %}
+                                <tr>
+                                    <td>{{ title.title }}</td>
+                                    <td>{% if title.is_main == 1 %}
+                                        是
+                                       {% else %}
+                                        否
+                                    {% endif %}
+                                    </td>
+                                    <td>{{ title.sort}}</td>
+                                    <td><a href="/guide/edit_title.html?nid={{ title.id }}">编辑</a>&nbsp;&nbsp;<a
+                                            href="/guide/del_title.html?nid={{ title.id }}" style="color: grey" onclick="return confirmDel()">删除</a></td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+<!-- 自定义js -->
+<script src="{% static 'js/content.js' %}"></script>
+
+<script language="JavaScript">
+function confirmDel(){
+return confirm("是否确定删除？");
+}
+</script>
+
+<!-- Data Tables -->
+<script src="{% static 'js/plugins/dataTables/jquery.dataTables.js' %}"></script>
+<script src="{% static 'js/plugins/dataTables/dataTables.bootstrap.js' %}"></script>
+
+<!-- Page-Level Scripts -->
+<script>
+    $(document).ready(function () {
+        $('.dataTables-base').dataTable();
+    });
+
+</script>
+
+
+</body>
+
+</html>
